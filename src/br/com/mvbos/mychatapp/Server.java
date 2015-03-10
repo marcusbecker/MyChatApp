@@ -113,7 +113,7 @@ public class Server {
             while (serverMode) {
 
                 String inputLine = client.listenServer();
-                if (inputLine != null && inputLine.trim().length() > 0) {
+                if (inputLine != null && inputLine.isEmpty()) {
                     if (inputLine.trim().equals(Comands.END_CHAT.getComand())) {
                         distribute(client, " say good bye!-");
                         client.close();
